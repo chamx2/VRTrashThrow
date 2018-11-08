@@ -1,24 +1,56 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OpeningSceneScript : MonoBehaviour
 {
-    public GameObject _interfaceToAnim;
+    bool readRecycle;
+    bool readNonBio;
+    bool readBio;
 
-    public List<Animation> _listAnimations;
-    private Animation _playAnimation;
+    public GameObject startButton;
+    public GameObject fadeOut;
 
-    private void Start()
+    public List<GameObject> categories;
+
+    public void OnClickRecycle()
     {
-        _listAnimations = new List<Animation>();
-        _playAnimation = _interfaceToAnim.GetComponent<Animation>();
+        readRecycle = true;
+        Debug.Log("Done reading recycle");
     }
 
-    public void PlayOnClick()
+    public void OnClickNonBio()
     {
-        //foreach()
-        _playAnimation.Play();
+        readNonBio = true;
+        Debug.Log("Done reading Non Bio");
     }
-	
+
+    public void OnClickBio()
+    {
+        readBio = true;
+        Debug.Log("Done reading Biodegradable");
+    }
+
+    public void LoadGameScene()
+    {
+        StartCoroutine(SceneSwitch());
+    }
+    private void Update()
+    {
+        if(readRecycle == true && readNonBio == true && readBio == true)
+        {
+            Debug.Log("Done reading");
+            startButton.SetActive(true);
+        }
+    }
+
+    IEnumerator SceneSwitch()
+    {
+        fadeOut.SetActive(true);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadSceneAsync(2);
+    }
+
+
 }
