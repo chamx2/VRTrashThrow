@@ -2663,6 +2663,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7e9c9a44f5ad5f04db5a35fdab8f23fe, type: 2}
+    - target: {fileID: 1361617774339314, guid: dd40b8b7984714c458f04ca1563e4756, type: 2}
+      propertyPath: m_TagString
+      value: TrashBin_Biodegradable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd40b8b7984714c458f04ca1563e4756, type: 2}
   m_IsPrefabParent: 0
@@ -2688,6 +2692,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6012669, y: 0.60126686, z: 1.0749285}
   m_Center: {x: -0.000000006722622, y: -0.000000036524934, z: -0.22557352}
+--- !u!114 &371784862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 371784860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41903584e60962546932ea057df25fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &372085473
 GameObject:
   m_ObjectHideFlags: 0
@@ -4426,7 +4441,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 618040092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.012, y: 0, z: 0.749}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1486443396}
@@ -5496,7 +5511,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8fa6215b40a260e42a29384b61d80d83, type: 3}
       propertyPath: m_TagString
-      value: Trash
+      value: Recyclable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8fa6215b40a260e42a29384b61d80d83, type: 3}
@@ -9904,6 +9919,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1526008323}
+  - component: {fileID: 1526008324}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -9924,6 +9940,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1526008324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1526008322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1470c7aca04a243b27f0d7c444d2cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1543215166
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Trash
+  - Biodegradable
+  - NonBiodegradable
+  - Recyclable
+  - TrashBin_Biodegradable
+  - TrashBin_NonBiodegradable
+  - TrashBin_Recyclable
   layers:
   - Default
   - TransparentFX
