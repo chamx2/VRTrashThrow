@@ -4,11 +4,28 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    
+    private static GameManager instance;
 
+    public static GameManager Instance { get { return instance; } }
+
+    public GameObject tempParent;
+    public Transform guide;
     private int points = 0;
     private float timer = 60;
 
+
+  
+    void Awake()
+    {
+        if(instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
     //On Load of the game. Start Countdown timer
 
     //if trash bin receives a collision
@@ -22,7 +39,12 @@ public class GameManager : MonoBehaviour
         //..
         StartCoroutine(GameFlow());
     }
-   
+
+    private void Update()
+    {
+       
+    }
+
     public void CorrectTrash(GameObject trash)
     {
         points += 1 ;
@@ -45,7 +67,7 @@ public class GameManager : MonoBehaviour
         while(timer > 0)
         {
             timer -= Time.deltaTime;
-            Debug.Log(timer);
+            //Debug.Log(timer);
             yield return new WaitForEndOfFrame();
         }
 
