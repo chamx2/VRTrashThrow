@@ -4,28 +4,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager instance;
-
-    public static GameManager Instance { get { return instance; } }
-
+   
     public GameObject tempParent;
     public Transform guide;
     private int points = 0;
     private float timer = 60;
 
 
-  
-    void Awake()
-    {
-        if(instance != null && instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            instance = this;
-        }
-    }
     //On Load of the game. Start Countdown timer
 
     //if trash bin receives a collision
