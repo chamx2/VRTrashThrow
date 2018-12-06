@@ -75,12 +75,12 @@ public class GvrReticlePointer : GvrBasePointer {
         if(raycastResultResult.gameObject.CompareTag("Trash"))
         {
 
-            raycastResultResult.gameObject.GetComponent<Rigidbody>().useGravity = false;
-            raycastResultResult.gameObject.GetComponent<Rigidbody>().isKinematic = true;
-            DragDropItem item = raycastResultResult.gameObject.GetComponent<DragDropItem>();
-            item.items.transform.position = item.guide.transform.position;
-            item.items.transform.parent = item.tempParent.transform;
-            Debug.Log("Drag trash");
+            //raycastResultResult.gameObject.GetComponent<Rigidbody>().useGravity = false;
+            //raycastResultResult.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            //DragDropItem item = raycastResultResult.gameObject.GetComponent<DragDropItem>();
+            //item.items.transform.position = item.guide.transform.position;
+            //item.items.transform.parent = item.tempParent.transform;
+            //Debug.Log("Drag trash");
         }
 
 

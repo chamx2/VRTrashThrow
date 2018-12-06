@@ -3,33 +3,57 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragDropItem : GameManager
+
+
+public class DragDropItem : MonoBehaviour
 {
-   
-    public GameObject items;
 
-    public void clickObject()
+
+     void OnMouseDown()
     {
-        if (Input.GetMouseButtonUp(0))
-        {
-                items.GetComponent<Rigidbody>().useGravity = false;
-                items.GetComponent<Rigidbody>().isKinematic = true;
-                items.transform.position = guide.transform.position;
-                //items.transform.rotation = guide.transform.rotation;
-                items.transform.parent = tempParent.transform;
-            
-        }
+        Debug.Log("Dragging Object");
+        GameManager.Instance.SetCurrentTrashItem(this.gameObject);
+        GameManager.Instance.clickObject();
+    }
+    void OnMouseDrag()
+    {
+        //Debug.Log("Dragging Object");
+        //SetCurrentTrashItem(this.gameObject);
+        //clickObject();
     }
 
-    public void letGoObject()
+    void OnMouseUp()
     {
-        if (Input.GetMouseButtonUp(0))
-        {
-            items.GetComponent<Rigidbody>().useGravity = true;
-            items.GetComponent<Rigidbody>().isKinematic = false;
-            items.transform.parent = null;
-            //items.transform.rotation = guide.transform.rotation;
-            items.transform.position = guide.transform.position;
-        }
+        Debug.Log("Letting Go of the object");
+        GameManager.Instance.letGoObject();
     }
+
+
 }
+
+
+
+//public void clickObject()
+//{
+//    if (Input.GetMouseButtonUp(0))
+//    {
+//        trashItem.GetComponent<Rigidbody>().useGravity = false;
+//        trashItem.GetComponent<Rigidbody>().isKinematic = true;
+//        trashItem.transform.position = guide.transform.position;
+//        //items.transform.rotation = guide.transform.rotation;
+//        trashItem.transform.parent = tempParent.transform;
+
+//    }
+//}
+
+//public void letGoObject()
+//{
+//    if (Input.GetMouseButtonUp(0))
+//    {
+//        trashItem.GetComponent<Rigidbody>().useGravity = true;
+//        trashItem.GetComponent<Rigidbody>().isKinematic = false;
+//        trashItem.transform.parent = null;
+//        //items.transform.rotation = guide.transform.rotation;
+//        trashItem.transform.position = guide.transform.position;
+//    }
+//}
