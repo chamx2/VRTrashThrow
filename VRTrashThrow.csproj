@@ -243,6 +243,7 @@
   <ItemGroup>
     <Compile Include="Assets\_Scripts\BinIdentity.cs" />
     <Compile Include="Assets\_Scripts\BiodegradableTrashBin.cs" />
+    <Compile Include="Assets\_Scripts\CountdownScript.cs" />
     <Compile Include="Assets\_Scripts\DragDropItem.cs" />
     <Compile Include="Assets\_Scripts\GameManager.cs" />
     <Compile Include="Assets\_Scripts\ItemIdentity.cs" />
