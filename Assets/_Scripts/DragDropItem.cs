@@ -11,7 +11,7 @@ public class DragDropItem : MonoBehaviour
 
      void OnMouseDown()
     {
-        Debug.Log("Dragging Object");
+        //Debug.Log("Dragging Object");
         GameManager.Instance.SetCurrentTrashItem(this.gameObject);
         GameManager.Instance.clickObject();
     }
@@ -24,7 +24,7 @@ public class DragDropItem : MonoBehaviour
 
     void OnMouseUp()
     {
-        Debug.Log("Letting Go of the object");
+        //Debug.Log("Letting Go of the object");
         GameManager.Instance.letGoObject();
     }
 

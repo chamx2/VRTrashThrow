@@ -70,22 +70,18 @@ public class GvrReticlePointer : GvrBasePointer {
 
   public override void OnPointerEnter(RaycastResult raycastResultResult, bool isInteractive) {
     SetPointerTarget(raycastResultResult.worldPosition, isInteractive);
-        Debug.Log(raycastResultResult.gameObject.tag);
+        //Debug.Log(raycastResultResult.gameObject.tag);
 
-        if(raycastResultResult.gameObject.CompareTag("Trash"))
-        {
+        //if(raycastResultResult.gameObject.CompareTag("Trash"))
+        //{
 
-            //raycastResultResult.gameObject.GetComponent<Rigidbody>().useGravity = false;
-            //raycastResultResult.gameObject.GetComponent<Rigidbody>().isKinematic = true;
-            //DragDropItem item = raycastResultResult.gameObject.GetComponent<DragDropItem>();
-            //item.items.transform.position = item.guide.transform.position;
-            //item.items.transform.parent = item.tempParent.transform;
-            //Debug.Log("Drag trash");
-        }
-
-
-       
-
+        //    //raycastResultResult.gameObject.GetComponent<Rigidbody>().useGravity = false;
+        //    //raycastResultResult.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        //    //DragDropItem item = raycastResultResult.gameObject.GetComponent<DragDropItem>();
+        //    //item.items.transform.position = item.guide.transform.position;
+        //    //item.items.transform.parent = item.tempParent.transform;
+        //    //Debug.Log("Drag trash");
+        //}
     }
 
   public override void OnPointerHover(RaycastResult raycastResultResult, bool isInteractive) {
