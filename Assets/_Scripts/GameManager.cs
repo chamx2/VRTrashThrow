@@ -10,19 +10,21 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return instance; } }
 
     public VRWalkController vrWalkController;
-   
+
+    public float _mainTimer;
     public int points = 0;
-    public float timer = 360.0f;
     public bool gameStart;
     public bool gameEnd;
 
     public GameObject tempParent;
     public Transform guide;
 
+    public Text _countdownText;
     public GameObject endGameCanvas;
     public Text endGameText;
 
 
+    private float timer;
     GameObject currentTrashItem;
 
 
@@ -46,27 +48,63 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         //read first game instruction
-        //...
-        //..
-        //this.tempParent = tempParent;
-        //this.guide = guide;
-        //this.vrWalkController = vrWalkController;
-        vrWalkController = vrWalkController.GetComponent<VRWalkController>();
+        
+        _countdownText.text = "Read the text first";
+       vrWalkController = vrWalkController.GetComponent<VRWalkController>();
         //StartCoroutine(GameFlow());
     }
 
     
 
-    void Update()
+    //void Update()
+    //{
+    //    if (gameStart)
+    //    {
+    //        StartCoroutine(GameFlow());
+    //    }
+    //    Debug.Log("Waiting for game to start");
+    //}
+
+    //IEnumerator GameFlow()
+    //{
+    //    while (!gameStart)
+    //    {
+    //        timer -= Time.deltaTime;
+    //        Debug.Log(timer);
+    //        yield return new WaitForEndOfFrame();
+    //    }
+
+
+    //    Debug.Log("GAME OVER\n Total Points:" + points);
+    //    GameEnd();
+    //}
+
+
+    #region CountdownTimer
+    public void StartCountdown()
     {
-        if (gameStart)
-        {
-            StartCoroutine(GameFlow());
-        }
-        //Debug.Log("Waiting for game to start");
+        GameStart();
+        timer = _mainTimer;
+        _countdownText.text = timer.ToString();
+        InvokeRepeating("Countdown", 1.0f, 1.0f);
     }
 
+    void Countdown()
+    {
+        if (--timer == 0.0f)
+        {
+            //add toString for text coundown
+            CancelInvoke("Countdown");
+            GameEnd();
+        }
 
+        //Update toString for text coundown
+        else
+            _countdownText.text = timer.ToString();
+    }
+    #endregion
+
+    #region Data Reference
     public void SetCurrentTrashItem(GameObject trashItem)
     {
         currentTrashItem = trashItem;
@@ -87,6 +125,9 @@ public class GameManager : MonoBehaviour
         return currentTrashItem;
     }
 
+    #endregion
+
+    #region GameFlow Helper
     public void GameStart()
     {
         gameStart = true;
@@ -107,26 +148,16 @@ public class GameManager : MonoBehaviour
 
     public void EndGameMessage()
     {
+        _countdownText.text = "Times Up!";
         endGameText.text = "Game Over! \n Your points: " + points;
         endGameCanvas.SetActive(true);
     }
   
 
-    IEnumerator GameFlow()
-    {
-        while(timer > 0)
-        {
-            timer -= Time.deltaTime;
-            Debug.Log(timer);
-            yield return new WaitForEndOfFrame();
-        }
+    
+    #endregion
 
-
-        Debug.Log("GAME OVER\n Total Points:" + points);
-        GameEnd();
-    }
-
-
+    #region Player controls
     public void clickObject()
     {
         Debug.Log("Carrying the object");
@@ -146,4 +177,5 @@ public class GameManager : MonoBehaviour
         //items.transform.rotation = guide.transform.rotation;
         currentTrashItem.transform.position = guide.transform.position;
     }
+    #endregion
 }

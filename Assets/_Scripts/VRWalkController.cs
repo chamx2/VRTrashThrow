@@ -32,13 +32,11 @@ public class VRWalkController : MonoBehaviour
         {
             if (playerMovement)
             {
-                Debug.Log("Enable Walking");
+                //Debug.Log("Enable Walking");
                 if (Input.GetMouseButton(0))
                 {
                     Vector3 forward = vrCamera.TransformDirection(Vector3.forward);
                     cc.SimpleMove(forward * moveSpeed * Time.deltaTime);
-
-                    
                 }
 
             //if (Physics.Raycast(transform.position, transform.forward, out hit, 100))
