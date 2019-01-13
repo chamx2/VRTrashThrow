@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public Transform guide;
 
     public Text _countdownText;
+    public Text _scoreText;
     public GameObject endGameCanvas;
     public Text endGameText;
 
@@ -50,6 +51,7 @@ public class GameManager : MonoBehaviour
         //read first game instruction
         
         _countdownText.text = "Read the text first";
+        _scoreText.text = " ";
        vrWalkController = vrWalkController.GetComponent<VRWalkController>();
         //StartCoroutine(GameFlow());
     }
@@ -85,7 +87,7 @@ public class GameManager : MonoBehaviour
     {
         GameStart();
         timer = _mainTimer;
-        _countdownText.text = timer.ToString();
+        _countdownText.text = "Time: " + timer.ToString();
         InvokeRepeating("Countdown", 1.0f, 1.0f);
     }
 
@@ -100,7 +102,10 @@ public class GameManager : MonoBehaviour
 
         //Update toString for text coundown
         else
-            _countdownText.text = timer.ToString();
+        {
+            _countdownText.text = "Time: " + timer.ToString();
+            _scoreText.text = "Score: " + points.ToString();
+        }
     }
     #endregion
 
