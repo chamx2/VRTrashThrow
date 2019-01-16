@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class OpeningSceneScript : MonoBehaviour
 {
@@ -12,38 +13,79 @@ public class OpeningSceneScript : MonoBehaviour
     public GameObject startButton;
     public GameObject fadeOut;
 
+    public GameObject _bioContext;
+    public GameObject _nonBioContext;
+    public GameObject _recyclableContext;
+
+    public Text _title;
+
     public List<GameObject> categories;
+
+
+
 
     public void OnClickRecycle()
     {
+        _title.text = " What is Recyclable Waste?";
+        _recyclableContext.SetActive(true);
         readRecycle = true;
-        Debug.Log("Done reading recycle");
     }
 
     public void OnClickNonBio()
     {
+        _title.text = " What is Non-Biodegradable Waste?";
+        _nonBioContext.SetActive(true);
         readNonBio = true;
-        Debug.Log("Done reading Non Bio");
+        //Debug.Log("Done reading Non Bio");
     }
 
     public void OnClickBio()
     {
+        _title.text = " What is Biodegradable Waste?";
+        _bioContext.SetActive(true);
         readBio = true;
-        Debug.Log("Done reading Biodegradable");
+        //Debug.Log("Done reading Biodegradable");
     }
 
     public void LoadGameScene()
     {
         StartCoroutine(SceneSwitch());
     }
-    private void Update()
+
+    public void OpenCategories()
     {
-        if(readRecycle == true && readNonBio == true && readBio == true)
+        _title.text = "3 Types of Wastes";
+
+        for (int i = 0; i < categories.Count; i++)
         {
-            Debug.Log("Done reading");
+            categories[i].SetActive(true);
+        }
+
+        CheckIfGameStart();
+    }
+
+    public void CloseCategories()
+    {
+        for(int i = 0; i < categories.Count; i++)
+        {
+            categories[i].SetActive(false);
+        }
+    }
+
+    private void CheckIfGameStart()
+    {
+        if (readRecycle == true && readNonBio == true && readBio == true)
+        {
             startButton.SetActive(true);
         }
     }
+
+    private void Update()
+    {
+      
+    }
+
+
 
     IEnumerator SceneSwitch()
     {
