@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
     public GameObject endGameCanvas;
     public Text endGameText;
 
+    public AudioSource correct;
+    public AudioSource wrong;
+
 
     private float timer;
     GameObject currentTrashItem;
@@ -53,6 +56,8 @@ public class GameManager : MonoBehaviour
         _countdownText.text = "Read the text first";
         _scoreText.text = " ";
        vrWalkController = vrWalkController.GetComponent<VRWalkController>();
+        correct = correct.GetComponent<AudioSource>();
+        wrong = wrong.GetComponent<AudioSource>();
         //StartCoroutine(GameFlow());
     }
 

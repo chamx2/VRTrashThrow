@@ -22,10 +22,11 @@ public enum BinType
 
 
 public class TrashManager : MonoBehaviour
-{
+{   
 
     public void CorrectTrash(GameObject trash)
     {
+        GameManager.Instance.correct.Play();
         GameManager.Instance.points += 1;
         Destroy(trash);
         Debug.Log("Current point(s):" + GameManager.Instance.points);
@@ -33,8 +34,8 @@ public class TrashManager : MonoBehaviour
 
     public void WrongTrash(GameObject trash)
     {
+        GameManager.Instance.wrong.Play();
         GameManager.Instance.points -= 1;
-
         Destroy(trash);
         Debug.Log("Current point(s):" + GameManager.Instance.points);
     }
