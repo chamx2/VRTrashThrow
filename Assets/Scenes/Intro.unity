@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -291,6 +291,21 @@ Prefab:
       propertyPath: m_Text
       value: VIRTUAL REALITY GAME
       objectReference: {fileID: 0}
+    - target: {fileID: 223456379639658502, guid: e5fda3778bb8b394e945413a6b381b24,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1488447830}
+    - target: {fileID: 114820924439246626, guid: e5fda3778bb8b394e945413a6b381b24,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114086422571616666, guid: e5fda3778bb8b394e945413a6b381b24,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5fda3778bb8b394e945413a6b381b24, type: 2}
   m_IsPrefabParent: 0
@@ -492,6 +507,31 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114257463565284388, guid: 6422a237485cce945ac9137f214458c0,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114363174684987884, guid: 6422a237485cce945ac9137f214458c0,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114990070809770242, guid: 6422a237485cce945ac9137f214458c0,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114379099633351828, guid: 6422a237485cce945ac9137f214458c0,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 223803591236625808, guid: 6422a237485cce945ac9137f214458c0,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1488447830}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6422a237485cce945ac9137f214458c0, type: 2}
   m_IsPrefabParent: 0
@@ -625,7 +665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -772,6 +812,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 35e52799fdb160549aa469e4eb476648, type: 2}
   m_IsPrefabParent: 0
+--- !u!20 &1488447830 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20438941235572318, guid: 35e52799fdb160549aa469e4eb476648,
+    type: 2}
+  m_PrefabInternal: {fileID: 1488447829}
 --- !u!1 &1641868267 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1546202363092422, guid: e5fda3778bb8b394e945413a6b381b24,
@@ -875,7 +920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

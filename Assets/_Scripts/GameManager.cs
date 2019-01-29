@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return instance; } }
 
     public VRWalkController vrWalkController;
+    public GameObject _fadeOut;
 
     public float _mainTimer;
     public int points = 0;
@@ -30,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     private float timer;
     GameObject currentTrashItem;
-
+    
 
     void Awake()
     {
@@ -52,7 +53,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         //read first game instruction
-        
+        _fadeOut.SetActive(false);
         _countdownText.text = "Read the text first";
         _scoreText.text = " ";
        vrWalkController = vrWalkController.GetComponent<VRWalkController>();

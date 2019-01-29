@@ -17,11 +17,13 @@ public class OpeningSceneScript : MonoBehaviour
     public GameObject _nonBioContext;
     public GameObject _recyclableContext;
 
+
     public Text _title;
 
     public List<GameObject> categories;
 
-
+    //code reuse Onclicks
+    //make less reference 
 
 
     public void OnClickRecycle()
@@ -61,7 +63,10 @@ public class OpeningSceneScript : MonoBehaviour
             categories[i].SetActive(true);
         }
 
-        CheckIfGameStart();
+        if (readRecycle == true && readNonBio == true && readBio == true)
+        {
+            startButton.SetActive(true);
+        }
     }
 
     public void CloseCategories()
@@ -72,25 +77,11 @@ public class OpeningSceneScript : MonoBehaviour
         }
     }
 
-    private void CheckIfGameStart()
-    {
-        if (readRecycle == true && readNonBio == true && readBio == true)
-        {
-            startButton.SetActive(true);
-        }
-    }
-
-    private void Update()
-    {
-      
-    }
-
-
 
     IEnumerator SceneSwitch()
     {
         fadeOut.SetActive(true);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         SceneManager.LoadSceneAsync(2);
     }
 
