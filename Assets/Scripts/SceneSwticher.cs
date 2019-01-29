@@ -15,29 +15,13 @@ public class SceneSwticher : MonoBehaviour {
 		FadeOut.SetActive (false);
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-	void OnTriggerEnter (Collider other) {
-
-		if (other.gameObject.tag == "Player") {
-
-			StartCoroutine (SceneSwitch ());
-
-		}
-
-
-	}
 
 	IEnumerator SceneSwitch () {
 
 		FadeOut.SetActive (true);
-		yield return new WaitForSeconds (3);
+		yield return new WaitForSeconds(3);
 		// DontDestroyOnLoad(transform.gameObject);
-		SceneManager.LoadScene (sceneIndex);
+		SceneManager.LoadSceneAsync(sceneIndex);
 	}
 
 	public void SceneSwitchButton () {

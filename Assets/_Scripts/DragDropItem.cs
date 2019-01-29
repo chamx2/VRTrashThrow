@@ -5,29 +5,47 @@ using UnityEngine.EventSystems;
 
 
 
-public class DragDropItem : MonoBehaviour
+public class DragDropItem : EventTrigger
 {
 
 
-     void OnMouseDown()
+    // void OnMouseDown()
+    //{
+    //    //Debug.Log("Dragging Object");
+    
+    //}
+
+    //void OnMouseUp()
+    //{
+    //    GameManager.Instance.letGoObject();
+    //}
+
+    public override void OnPointerDown(PointerEventData data)
     {
-        //Debug.Log("Dragging Object");
+        Debug.Log("OnPointerDown called.");
         GameManager.Instance.SetCurrentTrashItem(this.gameObject);
         GameManager.Instance.clickObject();
-    }
-    void OnMouseDrag()
-    {
-        //Debug.Log("Dragging Object");
-        //SetCurrentTrashItem(this.gameObject);
-        //clickObject();
+
     }
 
-    void OnMouseUp()
+    public override void OnPointerUp(PointerEventData eventData)
     {
-        //Debug.Log("Letting Go of the object");
+        Debug.Log("OnPointerUp called.");
         GameManager.Instance.letGoObject();
+        //base.OnPointerUp(eventData);
     }
 
+    //public void UpItem()
+    //{
+    //    //Debug.Log("Letting Go of the object");
+    //    GameManager.Instance.SetCurrentTrashItem(this.gameObject);
+    //    GameManager.Instance.clickObject();
+    //}
+
+    //public void DownItem()
+    //{
+    //    GameManager.Instance.letGoObject();
+    //}
 
 }
 

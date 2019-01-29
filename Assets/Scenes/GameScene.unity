@@ -3990,7 +3990,7 @@ MonoBehaviour:
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 5
+  m_DynamicPixelsPerUnit: 10
 --- !u!223 &177461177
 Canvas:
   m_ObjectHideFlags: 0
@@ -11207,6 +11207,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1526008324}
         m_MethodName: StartCountdown
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1502362174}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -24864,6 +24875,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6012669, y: 0.60126686, z: 1.0749285}
   m_Center: {x: -0.000000006722622, y: -0.000000036524934, z: -0.22557352}
+--- !u!1 &1434036112 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1684097566048904, guid: 75c14c83767c53449b1130df401d1216,
+    type: 2}
+  m_PrefabInternal: {fileID: 1741334855}
+--- !u!114 &1434036117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1434036112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &1448394728
 GameObject:
   m_ObjectHideFlags: 0
@@ -30051,15 +30080,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4728529693324666, guid: 75c14c83767c53449b1130df401d1216, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4728529693324666, guid: 75c14c83767c53449b1130df401d1216, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4728529693324666, guid: 75c14c83767c53449b1130df401d1216, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4728529693324666, guid: 75c14c83767c53449b1130df401d1216, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -30075,7 +30104,8 @@ Prefab:
       propertyPath: m_Size.x
       value: 0.89
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 95584300543929048, guid: 75c14c83767c53449b1130df401d1216, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 75c14c83767c53449b1130df401d1216, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1749101206

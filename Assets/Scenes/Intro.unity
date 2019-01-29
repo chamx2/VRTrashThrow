@@ -274,7 +274,7 @@ Prefab:
     - target: {fileID: 114323535208257616, guid: e5fda3778bb8b394e945413a6b381b24,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GameStart
+      value: SceneSwitchButton
       objectReference: {fileID: 0}
     - target: {fileID: 114250433419102024, guid: e5fda3778bb8b394e945413a6b381b24,
         type: 2}
@@ -597,9 +597,10 @@ Prefab:
     - target: {fileID: 114329306967200148, guid: 5c3de61239bb9e74589b16cfa219522a,
         type: 2}
       propertyPath: sceneIndex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114558997164000828, guid: 5c3de61239bb9e74589b16cfa219522a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5c3de61239bb9e74589b16cfa219522a, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &969949488 stripped
@@ -610,10 +611,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cbf3d08a54d1274683bae71491a6bd2, type: 3}
 --- !u!114 &969949489 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114558997164000828, guid: 5c3de61239bb9e74589b16cfa219522a,
+  m_PrefabParentObject: {fileID: 114329306967200148, guid: 5c3de61239bb9e74589b16cfa219522a,
     type: 2}
   m_PrefabInternal: {fileID: 969949487}
-  m_Script: {fileID: 11500000, guid: 866a63da8cb09154b92769a8c64a2f11, type: 3}
+  m_Script: {fileID: 11500000, guid: 4bf5aa807ac71c84d8ef8be31cd15990, type: 3}
 --- !u!1 &1272107380
 GameObject:
   m_ObjectHideFlags: 0
