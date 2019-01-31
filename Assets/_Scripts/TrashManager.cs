@@ -29,7 +29,7 @@ public class TrashManager : MonoBehaviour
         GameManager.Instance.correct.Play();
         GameManager.Instance.points += 1;
         Destroy(trash);
-        Debug.Log("Current point(s):" + GameManager.Instance.points);
+       // Debug.Log("Current point(s):" + GameManager.Instance.points);
     }
 
     public void WrongTrash(GameObject trash)
@@ -37,7 +37,7 @@ public class TrashManager : MonoBehaviour
         GameManager.Instance.wrong.Play();
         GameManager.Instance.points -= 1;
         Destroy(trash);
-        Debug.Log("Current point(s):" + GameManager.Instance.points);
+        //Debug.Log("Current point(s):" + GameManager.Instance.points);
     }
 
 }

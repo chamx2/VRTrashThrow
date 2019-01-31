@@ -22,7 +22,7 @@ public class DragDropItem : EventTrigger
 
     public override void OnPointerDown(PointerEventData data)
     {
-        Debug.Log("OnPointerDown called.");
+        //Debug.Log("OnPointerDown called.");
         GameManager.Instance.SetCurrentTrashItem(this.gameObject);
         GameManager.Instance.clickObject();
 
@@ -30,7 +30,7 @@ public class DragDropItem : EventTrigger
 
     public override void OnPointerUp(PointerEventData eventData)
     {
-        Debug.Log("OnPointerUp called.");
+        //Debug.Log("OnPointerUp called.");
         GameManager.Instance.letGoObject();
         //base.OnPointerUp(eventData);
     }
