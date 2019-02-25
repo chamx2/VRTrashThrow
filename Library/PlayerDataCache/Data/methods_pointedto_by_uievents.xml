@@ -1,0 +1,54 @@
+<linker>
+	<assembly fullname="UnityEngine" ignoreIfMissing="1">
+		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+		</type>
+	</assembly>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="ExitGame">
+			<method name="SceneMobileExit"/>
+		</type>
+		<type fullname="SceneSwticher">
+			<method name="SceneSwitchButton"/>
+		</type>
+		<type fullname="OpeningSceneScript">
+			<method name="LoadGameScene"/>
+			<method name="CloseCategories"/>
+			<method name="OnClickRecycle"/>
+			<method name="CloseCategories"/>
+			<method name="OnClickNonBio"/>
+			<method name="OpenCategories"/>
+			<method name="OpenCategories"/>
+			<method name="OpenCategories"/>
+			<method name="CloseCategories"/>
+			<method name="OnClickBio"/>
+		</type>
+		<type fullname="VRWalkController">
+			<method name="EnablePlayerWalk"/>
+		</type>
+		<type fullname="GameManager">
+			<method name="StartCountdown"/>
+		</type>
+	</assembly>
+</linker>
