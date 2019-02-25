@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -254,7 +254,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1546202363092422, guid: e5fda3778bb8b394e945413a6b381b24, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1630513430165578, guid: e5fda3778bb8b394e945413a6b381b24, type: 2}
       propertyPath: m_Name
@@ -264,7 +264,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a40efa3086c3f814b9f899b978043052,
+      objectReference: {fileID: 21300000, guid: f27b2830b59d4654ab593ccb3df2cadb,
         type: 3}
     - target: {fileID: 114323535208257616, guid: e5fda3778bb8b394e945413a6b381b24,
         type: 2}
@@ -289,7 +289,7 @@ Prefab:
     - target: {fileID: 114086422571616666, guid: e5fda3778bb8b394e945413a6b381b24,
         type: 2}
       propertyPath: m_Text
-      value: VIRTUAL REALITY GAME
+      value: SAMPLE BRAND VR GAME
       objectReference: {fileID: 0}
     - target: {fileID: 223456379639658502, guid: e5fda3778bb8b394e945413a6b381b24,
         type: 2}
@@ -305,6 +305,41 @@ Prefab:
         type: 2}
       propertyPath: m_RaycastTarget
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114086422571616666, guid: e5fda3778bb8b394e945413a6b381b24,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.3455882
+      objectReference: {fileID: 0}
+    - target: {fileID: 114086422571616666, guid: e5fda3778bb8b394e945413a6b381b24,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.3455882
+      objectReference: {fileID: 0}
+    - target: {fileID: 114086422571616666, guid: e5fda3778bb8b394e945413a6b381b24,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.3455882
+      objectReference: {fileID: 0}
+    - target: {fileID: 224273455312434934, guid: e5fda3778bb8b394e945413a6b381b24,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 172.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224273455312434934, guid: e5fda3778bb8b394e945413a6b381b24,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 86.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224273455312434934, guid: e5fda3778bb8b394e945413a6b381b24,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224273455312434934, guid: e5fda3778bb8b394e945413a6b381b24,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 110.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5fda3778bb8b394e945413a6b381b24, type: 2}
@@ -505,7 +540,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1727687940061682, guid: 6422a237485cce945ac9137f214458c0, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114257463565284388, guid: 6422a237485cce945ac9137f214458c0,
         type: 2}
@@ -632,7 +667,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1272107381
 RectTransform:
   m_ObjectHideFlags: 0
@@ -887,7 +922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1988548220
 RectTransform:
   m_ObjectHideFlags: 0
