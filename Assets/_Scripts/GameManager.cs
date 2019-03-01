@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,29 +10,35 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get { return instance; } }
 
+    [Header("Player")]
     public VRWalkController vrWalkController;
-    public GameObject _fadeOut;
+    public GameObject tempParent;
+    public Transform guide;
+    public Text _countdownText;
+    public Text _scoreText;
 
+    /// <summary>
+    /// turn to private if the game is perfectly running
+    /// </summary>
     public float _mainTimer;
     public int points = 0;
     public bool gameStart;
     public bool gameEnd;
 
-    public GameObject tempParent;
-    public Transform guide;
 
-    public Text _countdownText;
-    public Text _scoreText;
-    public GameObject endGameCanvas;
-    public Text endGameText;
 
+    [Header("Audios")]
     public AudioSource correct;
     public AudioSource wrong;
 
+    [Header("End Game variables")]
+    public GameObject endGameCanvas;
+    public Text endGameText;
+    public GameObject fadeOut;
+    public GameObject resetGameButton;
 
     private float timer;
     GameObject currentTrashItem;
-    
 
     void Awake()
     {
@@ -53,7 +60,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         //read first game instruction
-        _fadeOut.SetActive(false);
+        fadeOut.SetActive(false);
         _countdownText.text = "Read the text first";
         _scoreText.text = " ";
        vrWalkController = vrWalkController.GetComponent<VRWalkController>();
@@ -62,7 +69,9 @@ public class GameManager : MonoBehaviour
         //StartCoroutine(GameFlow());
     }
 
-    
+    /// <summary>
+    /// Uncomment for testing on PC Platform
+    /// </summary>
 
     //void Update()
     //{
@@ -147,7 +156,6 @@ public class GameManager : MonoBehaviour
     public void GamePause()
     {
         gameStart = false;
-
     }
 
     public void GameEnd()
@@ -160,12 +168,22 @@ public class GameManager : MonoBehaviour
     public void EndGameMessage()
     {
         _countdownText.text = "Times Up!";
-        endGameText.text = "Game Over! \n Your points: " + points;
+        endGameText.text = "Your point(s): " + points;
         endGameCanvas.SetActive(true);
     }
   
+    public void GameReset()
+    {
+        StartCoroutine(SceneSwitch());
+    }
 
-    
+    IEnumerator SceneSwitch()
+    {
+        fadeOut.SetActive(true);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadSceneAsync(2);
+    }
+
     #endregion
 
     #region Player controls
