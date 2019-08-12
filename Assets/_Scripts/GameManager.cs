@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public Transform guide;
     public Text _countdownText;
     public Text _scoreText;
+    public Text _reticleText;
 
     /// <summary>
     /// turn to private if the game is perfectly running
@@ -148,6 +149,36 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region GameFlow Helper
+
+    public void ChangeReticleText(GameObject current)
+    {
+        _reticleText.gameObject.SetActive(true);
+        TrashType currentTrashType = current.GetComponent<TrashIdentity>().GetTrashTypeIdentity();
+        switch(currentTrashType)
+        {
+            case TrashType.Biodegradable:
+                _reticleText.text = "Biodegradable";
+                break;
+
+            case TrashType.NonBiodegradable:
+                _reticleText.text = "NonBiodegradable";
+                break;
+            case TrashType.Recyclable:
+                _reticleText.text = "Recyclable";
+                break;
+            default:
+                ResetReticleText();
+                break;
+        }
+    }
+
+    public void ResetReticleText()
+    {
+        _reticleText.text = " ";
+        _reticleText.gameObject.SetActive(false);
+    }
+
+
     public void GameStart()
     {
         gameStart = true;

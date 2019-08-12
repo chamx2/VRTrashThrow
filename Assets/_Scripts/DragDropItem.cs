@@ -12,13 +12,23 @@ public class DragDropItem : EventTrigger
     // void OnMouseDown()
     //{
     //    //Debug.Log("Dragging Object");
-    
+
     //}
 
     //void OnMouseUp()
     //{
     //    GameManager.Instance.letGoObject();
     //}
+
+    public override void OnPointerEnter(PointerEventData eventData)
+    {
+        GameManager.Instance.ChangeReticleText(this.gameObject);
+    }
+
+    public override void OnPointerExit(PointerEventData eventData)
+    {
+        GameManager.Instance.ResetReticleText();
+    }
 
     public override void OnPointerDown(PointerEventData data)
     {

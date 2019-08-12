@@ -35,7 +35,14 @@ public class TrashManager : MonoBehaviour
     public void WrongTrash(GameObject trash)
     {
         GameManager.Instance.wrong.Play();
-        GameManager.Instance.points -= 1;
+        if(GameManager.Instance.points < 0)
+        {
+            GameManager.Instance.points -= 1;
+        }
+        else
+        {
+            GameManager.Instance.points = 0;
+        }
         Destroy(trash);
         //Debug.Log("Current point(s):" + GameManager.Instance.points);
     }

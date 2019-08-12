@@ -264,7 +264,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f27b2830b59d4654ab593ccb3df2cadb,
+      objectReference: {fileID: 21300000, guid: a40efa3086c3f814b9f899b978043052,
         type: 3}
     - target: {fileID: 114323535208257616, guid: e5fda3778bb8b394e945413a6b381b24,
         type: 2}
@@ -289,7 +289,7 @@ Prefab:
     - target: {fileID: 114086422571616666, guid: e5fda3778bb8b394e945413a6b381b24,
         type: 2}
       propertyPath: m_Text
-      value: SAMPLE BRAND VR GAME
+      value: A Virtual Reality Application
       objectReference: {fileID: 0}
     - target: {fileID: 223456379639658502, guid: e5fda3778bb8b394e945413a6b381b24,
         type: 2}
@@ -324,12 +324,12 @@ Prefab:
     - target: {fileID: 224273455312434934, guid: e5fda3778bb8b394e945413a6b381b24,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 172.4
+      value: 187.53
       objectReference: {fileID: 0}
     - target: {fileID: 224273455312434934, guid: e5fda3778bb8b394e945413a6b381b24,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 86.5
+      value: 99.745
       objectReference: {fileID: 0}
     - target: {fileID: 224273455312434934, guid: e5fda3778bb8b394e945413a6b381b24,
         type: 2}
