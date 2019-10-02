@@ -1,7 +1,9 @@
 # VR Waste Segregation Game
-A Virtual reality game where you throw garbage to the right can.
+A Virtual reality game where you throw wastes to the right bin.
 
-A version for google cardboard. Will make other versions for Oculus Gear VR and Windows Mixed Reality in the future.
+This project is in possible with the collaboration of Avinnovz Technologies and OrigamiVR.
 
-To copy this repository:
-$git clone https://github.com/chamx2/VRTrashThrow
+The application is only currently compatible with Google Cardboard and Samsung GearVR
+
+You're welcome to send issues for fix or email me at johnhaysupetran@gmail.com if you need assistance or to use this for commercial uses.
+
